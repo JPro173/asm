@@ -1,4 +1,5 @@
 *crackme*.*
-*.o
 *crackme*
+bin
+obj
 bin-linux/

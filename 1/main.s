@@ -11,6 +11,7 @@ pnum:
     call printf
     leave
     ret
+
 swap:
     push   %rbp
     mov    %rsp, %rbp
@@ -21,6 +22,7 @@ swap:
     pop     8(%rdi)
     leave
     ret
+
 main:
     push   %rbp
     mov    %rsp, %rbp

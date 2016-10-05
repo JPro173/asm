@@ -1,0 +1,6 @@
+{
+  "name": "Asm",
+  "tagline": "Asm Learnng",
+  "body": "# asm  \r\n\r\n## Projects \r\n1. Sort numbers  \r\n2. Sort structures  \r\n3. Check if prime  \r\n4. Range  \r\n\r\n## Guide\r\n### Asm Vim -> Run  \r\n```\r\nvim main.s; gcc -c main.s -o obj; gcc obj -o bin; ./bin\r\n```\r\n\r\n### C Vim -> Asm Vim  \r\n```\r\nvim main.c; gcc -c -S -O3 main.c; vim main.s\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

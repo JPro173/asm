@@ -35,22 +35,13 @@ range:
     push   %rsi
     push   %rdx
 
-    movq   %rsi, %rsi
-    mov    $12, %edi
-    mov    $10, %edx
-#    xor    %rdx, %rdx
-#    div    %rdi
-#    mov    %rax, %rdi
-#    call   pnum
-
     sub    %rdi, %rsi
     mov    %rdx, %rdi
     mov    %rsi, %rax
     xor    %rdx, %rdx
     div    %rdi
-    push   %rdx
+    push   %rax
     mov    (%rsp), %rdi
-    call   pnum
 
     mov    (%rsp), %rax
     imul   $8, %rax
@@ -115,6 +106,9 @@ main:
     mov    %rsp, %rbp
     sub    $32, %rsp
 
+    movq   $0, (%rsp)
+    movq   $0, 8(%rsp)
+    movq   $0, 16(%rsp)
     mov    $.LC_THREE_NUMS, %rdi
     mov    %rsp, %rcx
     mov    %rcx, %rsi
@@ -122,15 +116,14 @@ main:
     mov    %rcx, %rdx
     add    $8, %rcx
     call   scanf
-    mov    (%rsp), %rsi
-    mov    8(%rsp), %rdi
+    mov    (%rsp), %rdi
+    mov    8(%rsp), %rsi
     mov    16(%rsp), %rdx
 #    movq    $12, %rdi
 #    movq    $100, %rsi
 #    movq    $10, %rdx
     xor    %rcx, %rcx
     call   range
-
     mov    %rax, %rdi
     mov    %rdx, %rsi
     call   parray
